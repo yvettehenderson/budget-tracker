@@ -1,3 +1,12 @@
+if ('cache' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/cache.js')
+      .then((reg) => {
+        console.log('cache', reg);
+      });
+  });
+}
+
 let transactions = [];
 let myChart;
 
